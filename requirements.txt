@@ -1,1 +1,6 @@
-streamlit\npandas\nnumpy\nmatplotlib\nnetworkx\nscikit-fuzzy
+streamlit
+pandas
+numpy
+matplotlib
+networkx
+scikit-fuzzy
