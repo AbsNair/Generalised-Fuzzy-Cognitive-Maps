@@ -1,7 +1,7 @@
 import streamlit as st
 from pathlib import Path
 
-# --- App title & disclaimer ---
+# --- App title & disclaimer ---------------------------------------------------
 st.set_page_config(page_title="GFCM Launcher", layout="wide")
 st.title("🌐 Generalised Fuzzy Cognitive Maps Platform")
 
@@ -9,11 +9,11 @@ st.markdown("""
 Welcome to the **GFCM Explorer**. This tool allows you to:
 
 - 🧠 **Build** interactive fuzzy cognitive maps using a visual editor  
-- 💾 **Export** I and W matrices for use in simulations
+- 💾 **Export** I and W matrices for use in simulations  
 - 📊 **Simulate** GFCMs from uploaded matrices
 """)
 
-# --- Terms and Conditions ---
+# --- Terms and Conditions -----------------------------------------------------
 accept = st.checkbox("✅ I accept the Terms and Conditions")
 
 with st.expander("Read Terms and Conditions"):
@@ -31,12 +31,17 @@ if not accept:
     st.warning("Please accept the Terms and Conditions to proceed.")
     st.stop()
 
-# --- Navigation ---
+# --- Navigation ---------------------------------------------------------------
 st.success("You may now choose a tool:")
 
-tool = st.radio("Choose a module to open:", ["🧠 FCM Builder", "📊 GFCM Simulator"])
+tool = st.radio(
+    "Choose a module to open:",
+    ["🧠 FCM Builder", "📊 GFCM Simulator"]
+)
 
 if tool == "🧠 FCM Builder":
-    st.switch_page("cytoscape_fcm_editor_modal")
+    # file lives at   pages/cytoscape_fcm_editor_modal.py
+    st.switch_page("pages/cytoscape_fcm_editor_modal.py")
 elif tool == "📊 GFCM Simulator":
-    st.switch_page("app")
+    # file lives at   pages/app.py
+    st.switch_page("pages/app.py")
