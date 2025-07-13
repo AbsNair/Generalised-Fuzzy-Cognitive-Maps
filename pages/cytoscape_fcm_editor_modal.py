@@ -9,7 +9,7 @@ st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 st.title("🧠 Generalised Fuzzy Cognitive Map Builder")
 
 # --- Embed Cytoscape canvas (HTML contains no uploader) ---
-components.html(Path("cytoscape_fcm_editor_modal_embed.html").read_text(), height=550)
+components.html(Path("pages/cytoscape_fcm_editor_modal_embed.html").read_text(), height=550)
 st.markdown("---")
 
 # --- Single uploader in Streamlit ---
