@@ -37,6 +37,6 @@ st.success("You may now choose a tool:")
 tool = st.radio("Choose a module to open:", ["🧠 FCM Builder", "📊 GFCM Simulator"])
 
 if tool == "🧠 FCM Builder":
-    st.switch_page("pages/cytoscape_fcm_editor_modal.py")
+    st.switch_page("cytoscape_fcm_editor_modal")
 elif tool == "📊 GFCM Simulator":
-    st.switch_page("pages/app.py")
+    st.switch_page("app")
